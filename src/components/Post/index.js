@@ -1,26 +1,28 @@
 import React from 'react';
 import './styles.css';
-import './styles.css';
-function Post() {
+import Avatar from '@material-ui/core/Avatar';
+function Post({ userAvatar, username, postImage, postCaption }) {
 	return (
 		<div className="post">
 			<div className="post__header">
-				<img
+				<Avatar
 					className="post__header_image"
-					src="https://www.nj.com/resizer/zovGSasCaR41h_yUGYHXbVTQW2A=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg"
+					src={userAvatar}
+					// src="https://www.nj.com/resizer/zovGSasCaR41h_yUGYHXbVTQW2A=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg"
 					alt="username-image"
 				/>{' '}
-				<strong>username</strong>
+				<strong>{username}</strong>
 			</div>
 			<div className="post__image">
-				<img
+				<img src={postImage} alt="random image" />
+				{/* <img
 					src="https://www.irishcentral.com/uploads/article/46825/Giant_s_Causeway_Antrim_getty.jpg?t=1601033990"
 					alt="random image"
-				/>
+				/> */}
 			</div>
 			<div className="post_caption">
 				<h4>
-					<strong>anderson-test</strong>: Some post content
+					<strong>{username}</strong>: {postCaption}
 				</h4>
 			</div>
 		</div>
