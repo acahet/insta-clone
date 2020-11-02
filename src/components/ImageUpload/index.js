@@ -5,7 +5,7 @@ import firebase from 'firebase';
 
 import './styles.css';
 
-function ImageUpload({ user }) {
+function ImageUpload({ user, setAddPost }) {
 	const [caption, setCaption] = useState('');
 	const [image, setImage] = useState(null);
 	const [progressBar, setProgressBar] = useState(0);
@@ -46,6 +46,7 @@ function ImageUpload({ user }) {
 						setProgressBar(0);
 						setCaption('');
 						setImage(null);
+						setAddPost(false);
 					});
 			}
 		);

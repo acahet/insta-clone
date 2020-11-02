@@ -3,7 +3,7 @@ import './styles.css';
 
 import ModalComponent from '../Modal';
 
-function Header() {
+function Header({ user, setUser }) {
 	return (
 		<div className="header">
 			<img
@@ -12,7 +12,7 @@ function Header() {
 				alt="instagram-clone"
 			/>
 			<div className="header__modal">
-				<ModalComponent />
+				<ModalComponent user={user} setUser={setUser} />
 			</div>
 		</div>
 	);

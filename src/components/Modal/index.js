@@ -25,14 +25,14 @@ function getModalStyle() {
 		transform: `translate(${top}%, ${left}%)`,
 	};
 }
-function ModalComponent() {
+function ModalComponent({ user, setUser }) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [username, setUsername] = useState('');
 	const [openLoginModal, setOpenLoginModal] = useState(false);
 	const [openSignUpModal, setOpenSignUpModal] = useState(false);
 	const [addPost, setAddPost] = useState(false);
-	const [user, setUser] = useState(null);
+	// const [user, setUser] = useState(null);
 	const classes = useStyles();
 	const [modalStyle] = React.useState(getModalStyle);
 
@@ -90,7 +90,7 @@ function ModalComponent() {
 			>
 				<div style={modalStyle} className={classes.paper}>
 					{setAddPost && user ? (
-						<ImageUpload user={user.displayName} />
+						<ImageUpload setAddPost={false} user={user.displayName} />
 					) : (
 						<form className="modal__signup">
 							<img

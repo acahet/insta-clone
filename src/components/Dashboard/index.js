@@ -6,24 +6,31 @@ import './styles.css';
 
 function Dashboard() {
 	const [posts, setPosts] = useState([]);
-	// const [user, setUser] = useState(null);
+	const [user, setUser] = useState(null);
 	useEffect(() => {
 		getPostFromDb('posts', setPosts);
 	}, []);
 	return (
 		<>
 			<div className="dashboard">
-				<Header />
+				<Header user={user} setUser={setUser} />
 
 				{posts.length === 0 ? (
 					<h2> no posts logged</h2>
 				) : (
 					posts.map(({ id, post }) => {
+						console.log('id inside posts map is', id);
 						const { postCaption, postImage, username } = post;
 
 						return (
 							<div key={id} className="dashboard__body">
-								<Post username={username} postImage={postImage} postCaption={postCaption} />
+								<Post
+									postId={id}
+									user={user}
+									username={username}
+									postImage={postImage}
+									postCaption={postCaption}
+								/>
 							</div>
 						);
 					})
