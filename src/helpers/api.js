@@ -1,4 +1,4 @@
-import { db } from '../firebase';
+import { db, storage } from '../firebase';
 import firebase from 'firebase';
 
 export const getPostFromDb = (collection, setState) => {

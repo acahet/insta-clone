@@ -1,6 +1,6 @@
 .post {
 	background-color: white;
-	max-width: 400px;
+	max-width: 500px;
 	border: 1px solid lightgray;
 	margin-bottom: 45px;
 	margin-top: 10px;
@@ -22,6 +22,37 @@
 	object-fit: contain;
 }
 
-.post_caption > h4 {
+.post__caption > h4 {
 	font-weight: normal;
+	margin-left: 10px;
+}
+.post__comments {
+	padding: 20px;
+	margin-bottom: 10px;
+}
+.post__comments > p {
+	margin-bottom: 10px;
+}
+.post__commentsTotal {
+	padding: 10px;
+}
+.post__commentBox {
+	/* margin-left: 10px; */
+	display: flex;
+	margin-top: 10px;
+}
+.post__commentsTotal > span {
+	font-weight: normal;
+	font-size: 15px;
+	padding: 4px;
+}
+.post__input {
+	border-top: 1px solid lightgray;
+	text-align: center;
+	flex: 1;
+}
+.post__button {
+	/* border-top: 1px solid lightgray; */
+	border-top: 1px solid lightgray;
+	flex: 0;
 }

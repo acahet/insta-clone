@@ -1,8 +1,14 @@
 .header {
 	border-bottom: 1px solid #d3d3d3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .header__image {
 	object-fit: contain;
 	padding: 20px;
 	width: 100px;
+}
+.header__modal {
+	padding: 20px;
 }

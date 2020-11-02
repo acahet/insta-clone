@@ -1,0 +1,8 @@
+.modal__signup {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal__signup > img {
+	object-fit: contain;
+}
