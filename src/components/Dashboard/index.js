@@ -14,11 +14,11 @@ function Dashboard() {
 		<div className="dashboard">
 			<Header />
 
-			{posts.map((post) => {
-				const { postCaption, postImage, username } = post.posts;
-				console.log(' POST ', post.posts);
+			{posts.map(({ id, post }) => {
+				const { postCaption, postImage, username } = post;
+				console.log(' POST ', post);
 				return (
-					<div key={post.id} className="dashboard__body">
+					<div key={id} className="dashboard__body">
 						<Post username={username} postImage={postImage} postCaption={postCaption} />
 					</div>
 				);

@@ -6,7 +6,7 @@ export const getPostFromDb = (collection, setState) => {
 	db.collection(collection)
 		.orderBy('timestamp', 'desc')
 		.onSnapshot((snapshot) => {
-			setState(snapshot.docs.map((doc) => ({ id: doc.id, posts: doc.data() })));
+			setState(snapshot.docs.map((doc) => ({ id: doc.id, post: doc.data() })));
 		});
 };
 
