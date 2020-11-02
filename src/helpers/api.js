@@ -1,11 +1,12 @@
 import { db } from '../firebase';
 import firebase from 'firebase';
 
-export const getTodosFromDb = (collection, setState, collectionValue) => {
+export const getPostFromDb = (collection, setState) => {
+	//.orderBy('timestamp', 'desc')
 	db.collection(collection)
 		.orderBy('timestamp', 'desc')
 		.onSnapshot((snapshot) => {
-			setState(snapshot.docs.map((doc) => ({ id: doc.id, todo: doc.data()`.${collectionValue}` })));
+			setState(snapshot.docs.map((doc) => ({ id: doc.id, posts: doc.data() })));
 		});
 };
 
