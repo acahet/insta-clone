@@ -36,7 +36,7 @@ function ModalComponent() {
 
 	const handleSignIn = (e) => {
 		e.preventDefault();
-		auth.signInWithEmailAndPassword(email, password);
+		auth.signInWithEmailAndPassword(email, password).catch((error) => alert(error.message));
 		setPassword('');
 		setUsername('');
 		setOpenLoginModal(false);
