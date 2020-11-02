@@ -1,5 +1,7 @@
-.header__signup {
+.dashboard {
 	display: flex;
 	flex-direction: column;
 }
-
+.dashboard__body {
+	align-self: center;
+}
